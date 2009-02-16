@@ -1,0 +1,71 @@
+lxappearance
+------------------------------------------
+LXAppearance is the standard theme switcher of LXDE. Users are able to
+change the theme, icons, and fonts used by GTK+ applications easily.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libatk1.0_0-1.24.0-1
+  libgdk_pixbuf2.0_0-2.14.7-2
+  libglib2.0_0-2.18.4-1
+  libgtk2.0_0-2.14.7-2
+  libintl8-0.17-2
+  libX11_6-1.1.5-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.6a-1
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://lxde.org/
+
+Canonical download:
+  http://downloads.sourceforge.net/lxde/
+
+-------------------------------------------
+
+Build instructions:
+  unpack lxappearance-0.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./lxappearance-0.2-X.cygport all
+
+This will create:
+  /usr/src/lxappearance-0.2-X-src.tar.bz2
+  /usr/src/lxappearance-0.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/lxappearance.exe
+  /usr/share/applications/lxappearance.desktop
+  /usr/share/doc/lxappearance-0.2/AUTHORS
+  /usr/share/doc/lxappearance-0.2/COPYING
+  /usr/share/doc/lxappearance-0.2/INSTALL
+  /usr/share/doc/lxappearance-0.2/NEWS
+  /usr/share/doc/lxappearance-0.2/README
+  /usr/share/locale/zh_TW/LC_MESSAGES/lxappearance.mo
+  /usr/share/lxappearance/install-icon-theme.sh
+  /usr/share/man/man1/lxappearance.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 0.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

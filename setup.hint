@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin libatk1.0_0 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libintl8 libX11_6
+requires: libatk1.0_0 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libintl8 libX11_6
 sdesc: "GTK+ theme switcher"
 ldesc: "LXAppearance is the standard theme switcher of LXDE. Users are 
 able to change the theme, icons, and fonts used by GTK+ applications 

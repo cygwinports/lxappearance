@@ -1,3 +1,5 @@
+inherit gnome2
+
 DESCRIPTION="LXDE theme switcher"
 HOMEPAGE="http://lxde.org/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"

@@ -1,0 +1,11 @@
+--- origsrc/lxappearance-0.5.0/data/ui/Makefile.am	2010-08-07 11:19:09.000000000 -0500
++++ src/lxappearance-0.5.0/data/ui/Makefile.am	2011-01-20 23:55:12.093160500 -0600
+@@ -15,7 +15,7 @@ CLEANFILES = \
+ # Purge GtkBuilder UI files
+ %.ui: %.glade
+ 	cp $< $@
+-	$(top_srcdir)/src/xml-purge $@
++	$(top_builddir)/src/xml-purge $@
+ 
+ EXTRA_DIST= \
+ 	$(ui_DATA) \

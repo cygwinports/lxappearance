@@ -6,3 +6,8 @@ DESCRIPTION="LXAppearance is the standard theme switcher of LXDE. Users are
 able to change the theme, icons, and fonts used by GTK+ applications easily."
 HOMEPAGE="http://lxde.org/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
+PATCH_URI="0.5.2-implib.patch"
+
+PKG_NAMES="${PN} ${PN}-devel"
+lxappearance_CONTENTS="usr/bin/ usr/share/"
+lxappearance_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"

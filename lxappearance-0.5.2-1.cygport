@@ -1,0 +1,8 @@
+inherit gnome2
+
+CATEGORY="LXDE"
+SUMMARY="GTK+ theme switcher"
+DESCRIPTION="LXAppearance is the standard theme switcher of LXDE. Users are
+able to change the theme, icons, and fonts used by GTK+ applications easily."
+HOMEPAGE="http://lxde.org/"
+SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"

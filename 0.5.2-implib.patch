@@ -24,3 +24,14 @@
 +
 +install-exec-hook:
 +	$(INSTALL_DATA) liblxappearance.dll.a $(DESTDIR)$(libdir)/
+--- origsrc/lxappearance-0.5.2/src/plugin.c	2012-05-19 17:08:32.000000000 -0500
++++ src/lxappearance-0.5.2/src/plugin.c	2012-08-17 03:47:08.766042900 -0500
+@@ -48,7 +48,7 @@ void plugins_init(GtkBuilder* builder)
+         return;
+     while(name = g_dir_read_name(dir))
+     {
+-        if(g_str_has_suffix(name, ".so"))
++        if(g_str_has_suffix(name, "." G_MODULE_SUFFIX))
+         {
+             char* file = g_build_filename(PLUGIN_DIR, name, NULL);
+             GModule* mod = g_module_open(file, 0);

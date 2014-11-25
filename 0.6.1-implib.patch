@@ -1,13 +1,13 @@
---- origsrc/lxappearance-0.5.2/data/lxappearance.pc.in	2012-05-19 17:08:32.000000000 -0500
-+++ src/lxappearance-0.5.2/data/lxappearance.pc.in	2012-08-17 03:23:56.095952100 -0500
+--- origsrc/lxappearance-0.6.1/data/lxappearance.pc.in	2014-09-14 11:37:11.000000000 -0500
++++ src/lxappearance-0.6.1/data/lxappearance.pc.in	2014-11-25 14:09:59.337286600 -0600
 @@ -8,3 +8,5 @@ Name: lxappearance
  Description: Tool used to customize look and feel of gtk+ applications.
  Requires: gtk+-2.0 >= 2.12
  Version: @VERSION@
 +Cflags: -I${includedir}
 +Libs: -L${libdir} -llxappearance
---- origsrc/lxappearance-0.5.2/src/Makefile.am	2012-05-19 17:08:32.000000000 -0500
-+++ src/lxappearance-0.5.2/src/Makefile.am	2012-08-17 03:33:39.467533300 -0500
+--- origsrc/lxappearance-0.6.1/src/Makefile.am	2014-09-14 11:37:11.000000000 -0500
++++ src/lxappearance-0.6.1/src/Makefile.am	2014-11-25 14:09:59.340787000 -0600
 @@ -42,6 +42,8 @@ lxappearance_CFLAGS = \
  	-Werror-implicit-function-declaration \
  	$(NULL)
@@ -17,18 +17,18 @@
  lxappearance_LDADD = \
  	$(GTK_LIBS) \
  	$(XLIB_LIBS) \
-@@ -56,3 +58,6 @@ noinst_PROGRAMS=xml-purge
- xml_purge_SOURCES=$(top_srcdir)/src/xml-purge.c
- xml_purge_CFLAGS=$(GTK_CFLAGS)
- xml_purge_LDADD=$(GTK_LIBS)
+@@ -49,3 +51,6 @@ lxappearance_LDADD = \
+ 	$(DBUS_LIBS) \
+ 	$(INTLLIBS) \
+ 	$(NULL)
 +
 +install-exec-hook:
 +	$(INSTALL_DATA) liblxappearance.dll.a $(DESTDIR)$(libdir)/
---- origsrc/lxappearance-0.5.2/src/plugin.c	2012-05-19 17:08:32.000000000 -0500
-+++ src/lxappearance-0.5.2/src/plugin.c	2012-08-17 03:47:08.766042900 -0500
+--- origsrc/lxappearance-0.6.1/src/plugin.c	2014-09-14 11:37:11.000000000 -0500
++++ src/lxappearance-0.6.1/src/plugin.c	2014-11-25 14:09:59.346287700 -0600
 @@ -48,7 +48,7 @@ void plugins_init(GtkBuilder* builder)
          return;
-     while(name = g_dir_read_name(dir))
+     while ((name = g_dir_read_name(dir)))
      {
 -        if(g_str_has_suffix(name, ".so"))
 +        if(g_str_has_suffix(name, "." G_MODULE_SUFFIX))

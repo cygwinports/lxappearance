@@ -2,7 +2,7 @@ inherit gnome2
 
 NAME="lxappearance"
 VERSION=0.6.2
-RELEASE=1
+RELEASE=2
 CATEGORY="LXDE"
 SUMMARY="GTK+ theme switcher"
 DESCRIPTION="LXAppearance is the standard theme switcher of LXDE. Users are
@@ -14,3 +14,5 @@ PATCH_URI="0.6.1-implib.patch"
 PKG_NAMES="${NAME} ${NAME}-devel"
 lxappearance_CONTENTS="usr/bin/ usr/share/"
 lxappearance_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+CYGCONF_ARGS="--enable-dbus"
